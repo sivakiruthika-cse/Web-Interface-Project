@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Counter App</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        margin-top: 150px;
+      }
+
+      .box {
+        display: inline-block;
+        border: 2px solid brown;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: beige;
+      }
+
+      button {
+        margin: 5px;
+        padding: 8px 15px;
+        background-color: burlywood;
+        border-radius: 10px;
+      }
+
+      h1 {
+        color: brown;
+      }
+
+      h2 {
+        color: chocolate;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>Simple Counter App</h2>
+      <h1 id="n">0</h1>
+      <button onclick="let c=document.getElementById('n'); c.textContent=parseInt(c.textContent)+1;">+1</button>
+      <button onclick="let c=document.getElementById('n'); c.textContent=parseInt(c.textContent)-1;">-1</button>
+      <button onclick="document.getElementById('n').textContent='0';">Reset</button>
+    </div>
+  </body>
+</html>

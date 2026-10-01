@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile Card</title>
+    <style>
+       body{
+    font-family: Arial;
+    background-color: lavender;
+    text-align:center;
+}
+
+.container{
+    width:320px;
+    margin:40px auto;
+    padding:20px;
+    background:white;
+    border:1px solid gray;
+    border-radius:8px;
+}
+
+.container input{
+    width:90%;
+    padding:8px;
+}
+
+button{
+    padding:8px 15px;
+    background:green;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+#card{
+    width:320px;
+    margin:20px auto;
+    padding:15px;
+    border:3px solid brown;
+    border-radius:8px;
+    display:none;
+    background-color: beige;
+    color:brown
+}
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Student Profile</h2>
+
+    <input type="text" id="name" placeholder="Enter Name"><br><br>
+
+    <input type="text" id="roll" placeholder="Enter Roll No"><br><br>
+
+    <input type="number" id="marks" placeholder="Enter Marks"><br><br>
+    
+
+    <button onclick="displayCard()">Display</button>
+
+</div>
+
+<div id="card"></div>
+
+<script>
+
+function displayCard(){
+
+    let name = document.getElementById("name").value;
+    let roll = document.getElementById("roll").value;
+    let marks = document.getElementById("marks").value;
+
+    if(name == "" || roll == "" || marks == ""){
+        alert("Please fill all the required fields!");
+        return;
+    }
+
+    marks = Number(marks);
+
+    let grade = "";
+
+    for(let i=1; i<=1; i++){
+
+        if(marks>=90){
+            grade="O";
+        }
+        else if(marks>=80){
+            grade="A";
+        }
+        else if(marks>=70){
+            grade="B";
+        }
+        else if(marks>=60){
+            grade="C";
+        }
+        else if(marks>=50){
+            grade="D";
+        }
+        else{
+            grade="F";
+        }
+    }
+
+    document.getElementById("card").innerHTML =
+    "<h3>Student Card</h3>" +
+    "<p><b>Name:</b> " + name + "</p>" +
+    "<p><b>Roll No:</b> " + roll + "</p>" +
+    "<p><b>Marks:</b> " + marks + "</p>" +
+    "<p><b>Grade:</b> " + grade + "</p>";
+
+    document.getElementById("card").style.display = "block";
+}
+
+</script>
+
+</body>
+</html>

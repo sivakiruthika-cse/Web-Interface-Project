@@ -1,0 +1,40 @@
+body {
+  font-family: Arial;
+  background-color: lightblue;
+}
+
+.project {
+  text-align: center;
+}
+
+h1 {
+  color: darkblue;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 200px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.card img {
+  width: 200px;
+  height: 150px;
+}
+
+.card h2 {
+  color: darkblue;
+}
+
+.card p {
+  color: gray;
+}
